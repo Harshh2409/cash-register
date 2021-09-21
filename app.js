@@ -8,12 +8,12 @@ const notes = [2000, 500, 100, 50, 20, 10, 5, 1];
 
 checkbutton.addEventListener("click", function validateBillAndCashAmount() {
   hideMessage();
-  if (billamount.value > 0)
+  if (Number(billamount.value) > 0)
    {
-    if (cashgiven.value >= billamount.value) 
+    if (Number(cashgiven.value) >= Number(billamount.value)) 
     {
       
-      const amt= cashgiven.value - billamount.value; 
+      const amt= Number(cashgiven.value) - Number(billamount.value); 
       showChange(amt);
     } 
      else
